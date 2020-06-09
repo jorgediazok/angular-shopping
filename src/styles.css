@@ -24,3 +24,8 @@
 .product-btn {
   font-size: smaller;
 }
+
+.alert {
+  text-align: center;
+  font-weight: bold;
+}
