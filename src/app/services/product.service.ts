@@ -15,7 +15,7 @@ export class ProductService {
     new Product(
       2,
       'Camiseta 2',
-      'This is the second camiseta. New, lovely materials',
+      'This is the second camiseta. Lovely new',
       120
     ),
     new Product(
@@ -27,7 +27,7 @@ export class ProductService {
     new Product(
       4,
       'Camiseta 4',
-      'This is the fourth camiseta. New, lovely materials',
+      'This is the fourth camiseta. New, lovely',
       150
     ),
     new Product(
@@ -45,8 +45,20 @@ export class ProductService {
     new Product(
       7,
       'Camiseta 7',
-      'This is the seventh camiseta. New, lovely materials',
+      'This is the seventh camiseta. New, lovely',
       200
+    ),
+    new Product(
+      8,
+      'Camiseta 8',
+      'This is the eight camiseta. New, lovely',
+      220
+    ),
+    new Product(
+      9,
+      'Camiseta 9',
+      'This is the ninth camiseta. New, lovely',
+      250
     ),
   ];
 
