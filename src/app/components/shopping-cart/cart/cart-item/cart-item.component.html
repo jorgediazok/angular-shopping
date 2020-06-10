@@ -2,4 +2,9 @@
   <span>{{ cartItem.productName }}</span> x <span>{{ cartItem.qty }}</span
   >:
   <strong>$ {{ cartItem.qty * cartItem.price }} </strong>
+  <i
+    class="fa fa-trash"
+    aria-hidden="true"
+    (click)="deleteItem(cartItem.id)"
+  ></i>
 </div>
