@@ -48,9 +48,9 @@ export class CartComponent implements OnInit {
     this.cartItems = this.cartItems.filter(
       (cartItem) => cartItem.productId !== productId
     );
+    this.cartTotal = 0;
+    this.cartItems.forEach((item) => {
+      this.cartTotal = item.qty * item.price;
+    });
   }
-
-  //deleteItems(id) {
-  // this.cartItems = this.cartItems.filter((cartItem) => cartItem.id !== id);
-  //}
 }

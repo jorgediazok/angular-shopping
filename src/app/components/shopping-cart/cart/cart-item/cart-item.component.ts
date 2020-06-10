@@ -12,7 +12,7 @@ export class CartItemComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  deleteItem(productId: any) {
+  deleteItem(productId: number) {
     this.delete.emit(productId);
   }
 }
