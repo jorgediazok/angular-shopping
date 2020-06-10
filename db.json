@@ -1,4 +1,49 @@
 {
+  "products": [
+    {
+      "id": 1,
+      "name": "River Plate Shirt",
+      "description": "River first team shirt. White, All sizes.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSVOvRqIr2NN55eeapHdUcV6Vgkd6tLeIvtzXQlUrcJaiybi56GHqnGiUzhduYN8Zg9-kxZVmyy&usqp=CAc",
+      "price": 120
+    },
+    {
+      "id": 2,
+      "name": "Adidas Shorts",
+      "description": "Adidas training shorts. 100% Cotton.",
+      "imageUrl": "https://assets.adidas.com/images/h_840,f_auto,q_auto:sensitive,fl_lossy/6538ab9cec9043a0be00aa4e01325d54_9366/Shorts_largos_Equipment_Negro_ED6285_01_laydown.jpg",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Adidas Football Shoes",
+      "description": "Made of leather. Black. All sizes",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcS_KKXGgEDR4TyuUtqcFYQTb2qD2R014BYywpggSu8blOGve9tUmkm2CcnjxLRTLAgCosj2r33g&usqp=CAc",
+      "price": 200
+    },
+    {
+      "id": 4,
+      "name": "UA Training Shirt",
+      "description": "Under Armour training shirt. Clima cool.",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJuuuXDByW3Xiiq-X8-1wkjXXWjjnIzYJfdNoarWSxCgdAJf7erWQmj3tIX9AbVLA5Ap-c0xn4&usqp=CAc",
+      "price": 100
+    },
+    {
+      "id": 5,
+      "name": "Adidas Top Ball",
+      "description": "Official Ball for Argentina League",
+      "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSs7xDiLMP0aRl5ax_62-FiP23HkVFnkxLivZDkAMsXkfWJlqKSnYa-liFXw3DxaMGjt_7Ty3Z5&usqp=CAc",
+      "price": 200
+    },
+    {
+      "id": 6,
+      "name": "Crossfit Gloves",
+      "description": "Training gloves. 100% quality",
+      "imageUrl": "https://guantes.store/wp-content/uploads/2019/11/Guantes_de_Crossfit_para_Gimnasio_Guantes_de_Entrenamiento.jpg",
+      "price": 80
+    }
+  ],
+
   "posts": [
     {
       "id": 1,
