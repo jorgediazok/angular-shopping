@@ -43,7 +43,14 @@ export class CartComponent implements OnInit {
       this.cartTotal += item.qty * item.price;
     });
   }
-  deleteItems(id: any) {
-    this.cartItems = this.cartItems.filter((cartItem) => cartItem.id !== id);
+
+  deleteItems(productId) {
+    this.cartItems = this.cartItems.filter(
+      (cartItem) => cartItem.productId !== productId
+    );
   }
+
+  //deleteItems(id) {
+  // this.cartItems = this.cartItems.filter((cartItem) => cartItem.id !== id);
+  //}
 }
