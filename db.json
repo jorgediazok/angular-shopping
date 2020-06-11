@@ -24,7 +24,7 @@
     {
       "id": 4,
       "name": "UA Training Shirt",
-      "description": "Under Armour training shirt. Clima cool.",
+      "description": "UA training shirt. Clima cool.",
       "imageUrl": "https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSJuuuXDByW3Xiiq-X8-1wkjXXWjjnIzYJfdNoarWSxCgdAJf7erWQmj3tIX9AbVLA5Ap-c0xn4&usqp=CAc",
       "price": 100
     },
@@ -39,10 +39,12 @@
       "id": 6,
       "name": "Crossfit Gloves",
       "description": "Training gloves. 100% quality",
-      "imageUrl": "https://guantes.store/wp-content/uploads/2019/11/Guantes_de_Crossfit_para_Gimnasio_Guantes_de_Entrenamiento.jpg",
+      "imageUrl": "https://decatlonx.com/image/cache/catalog/Reebok/S02468-800x800.jpg",
       "price": 80
     }
   ],
+
+  "cart": [],
 
   "posts": [
     {
@@ -51,6 +53,7 @@
       "author": "typicode"
     }
   ],
+
   "comments": [
     {
       "id": 1,
