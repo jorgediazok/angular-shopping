@@ -30,32 +30,15 @@
               formControlName="password"
             />
           </div>
-          <div
-            class="btn loginBtnError"
+          <button
+            class="btn btn-danger loginBtnError"
             *ngIf="
               loginForm.get('password').errors &&
               loginForm.get('password').dirty
             "
           >
-            <button
-              class="btn btn-danger"
-              *ngIf="loginForm.get('password').hasError('required')"
-            >
-              Password is Obligatory
-            </button>
-            <button
-              class="btn btn-danger"
-              *ngIf="loginForm.get('password').hasError('minlength')"
-            >
-              Your Password must contain at least 6 characters
-            </button>
-            <button
-              class="btn btn-danger"
-              *ngIf="loginForm.get('password').hasError('maxlength')"
-            >
-              Your Password must contain less than 10 characters
-            </button>
-          </div>
+            Please introduce your Password
+          </button>
 
           <button type="submit" class="btn btn-primary btn-block mt-3">
             Login
