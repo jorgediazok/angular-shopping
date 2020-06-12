@@ -44,6 +44,7 @@ export class CartComponent implements OnInit {
     });
   }
 
+  //delete items
   deleteItems(productId) {
     this.cartItems = this.cartItems.filter(
       (cartItem) => cartItem.productId !== productId
