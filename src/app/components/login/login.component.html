@@ -3,7 +3,7 @@
     <div class="card">
       <div class="card-body">
         <h1 style="text-align: center;">LOGIN</h1>
-        <form [formGroup]="loginForm">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
           <div class="form group">
             <label for="email">Email</label>
             <input
@@ -13,6 +13,15 @@
               autofocus
             />
           </div>
+          <button
+            class="btn btn-danger loginBtnError"
+            *ngIf="
+              loginForm.get('email').errors && loginForm.get('email').dirty
+            "
+          >
+            Email is Obligatory
+          </button>
+
           <div class="form group">
             <label for="password" class="mt-2">Password</label>
             <input
@@ -21,6 +30,33 @@
               formControlName="password"
             />
           </div>
+          <div
+            class="btn loginBtnError"
+            *ngIf="
+              loginForm.get('password').errors &&
+              loginForm.get('password').dirty
+            "
+          >
+            <button
+              class="btn btn-danger"
+              *ngIf="loginForm.get('password').hasError('required')"
+            >
+              Password is Obligatory
+            </button>
+            <button
+              class="btn btn-danger"
+              *ngIf="loginForm.get('password').hasError('minlength')"
+            >
+              Your Password must contain at least 6 characters
+            </button>
+            <button
+              class="btn btn-danger"
+              *ngIf="loginForm.get('password').hasError('maxlength')"
+            >
+              Your Password must contain less than 10 characters
+            </button>
+          </div>
+
           <button type="submit" class="btn btn-primary btn-block mt-3">
             Login
           </button>
