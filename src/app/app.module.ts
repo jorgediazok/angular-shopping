@@ -16,6 +16,12 @@ import { ProductItemComponent } from './components/shopping-cart/product-list/pr
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
+import { ShirtComponent } from './components/details/shirt/shirt.component';
+import { ShortComponent } from './components/details/short/short.component';
+import { ShoesComponent } from './components/details/shoes/shoes.component';
+import { TrainingShirtComponent } from './components/details/training-shirt/training-shirt.component';
+import { FootballBallComponent } from './components/details/football-ball/football-ball.component';
+import { GlovesComponent } from './components/details/gloves/gloves.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +38,12 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
     LoginComponent,
     RegisterComponent,
     PageNotFoundComponent,
+    ShirtComponent,
+    ShortComponent,
+    ShoesComponent,
+    TrainingShirtComponent,
+    FootballBallComponent,
+    GlovesComponent,
   ],
   imports: [
     BrowserModule,
