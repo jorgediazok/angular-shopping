@@ -10,7 +10,7 @@ export class RegisterComponent implements OnInit {
   registerForm: FormGroup;
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
-      email: ['', [Validators.required]],
+      email: ['', [Validators.required, Validators.email]],
       password: [
         '',
         [
@@ -26,5 +26,6 @@ export class RegisterComponent implements OnInit {
 
   register() {
     console.log(this.registerForm.value);
+    this.registerForm.reset();
   }
 }

@@ -8,20 +8,21 @@
             <label for="email">Email</label>
             <input
               type="email"
+              name="email"
               class="form-control"
               formControlName="email"
               autofocus
             />
           </div>
-          <button
-            class="btn btn-danger registerBtnError"
+          <div
+            class="registerBtnError"
             *ngIf="
               registerForm.get('email').errors &&
               registerForm.get('email').dirty
             "
           >
-            Email is Obligatory
-          </button>
+            Invalid Email
+          </div>
           <div class="form group">
             <label for="password" class="mt-2">Password</label>
             <input
@@ -31,30 +32,24 @@
             />
           </div>
           <div
-            class="btn btn-danger registerDivError"
+            class="registerBtnError"
             *ngIf="
               registerForm.get('password').errors &&
               registerForm.get('password').dirty
             "
           >
-            <button
-              class="btn btn-danger"
-              *ngIf="registerForm.get('password').hasError('required')"
-            >
-              Password is Obligatory
-            </button>
-            <button
-              class="btn btn-danger"
+            <div
+              class="registerBtnError"
               *ngIf="registerForm.get('password').hasError('minlength')"
             >
               Your Password must contain at least 6 characters
-            </button>
-            <button
-              class="btn btn-danger"
+            </div>
+            <div
+              class="registerBtnError"
               *ngIf="registerForm.get('password').hasError('maxlength')"
             >
               Your Password must contain less than 10 characters
-            </button>
+            </div>
           </div>
 
           <button type="submit" class="btn btn-primary btn-block mt-3">

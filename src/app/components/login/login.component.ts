@@ -10,15 +10,8 @@ export class LoginComponent implements OnInit {
   loginForm: FormGroup;
   constructor(private fb: FormBuilder) {
     this.loginForm = this.fb.group({
-      email: ['', [Validators.required]],
-      password: [
-        '',
-        [
-          Validators.required,
-          Validators.minLength(6),
-          Validators.maxLength(10),
-        ],
-      ],
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', [Validators.required]],
     });
   }
 
@@ -26,5 +19,6 @@ export class LoginComponent implements OnInit {
 
   login() {
     console.log(this.loginForm.value);
+    this.loginForm.reset();
   }
 }
