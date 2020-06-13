@@ -1,0 +1,15 @@
+h1 {
+  font-size: 1.7em;
+}
+
+.images-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 10px;
+}
+
+img {
+  padding: 10px;
+  height: 200px;
+}

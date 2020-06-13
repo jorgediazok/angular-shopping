@@ -15,8 +15,9 @@ import { CartItemComponent } from './components/shopping-cart/cart/cart-item/car
 import { ProductItemComponent } from './components/shopping-cart/product-list/product-item/product-item.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 import { DetailsComponent } from './components/details/details.component';
+import { ProductDetailsComponent } from './components/details/product-details/product-details.component';
+import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { DetailsComponent } from './components/details/details.component';
     RegisterComponent,
     PageNotFoundComponent,
     DetailsComponent,
+    ProductDetailsComponent,
   ],
   imports: [
     BrowserModule,
