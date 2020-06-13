@@ -17,7 +17,4 @@ export class ProductItemComponent implements OnInit {
   handleAddToCart() {
     this.message.sendMessage(this.productItem);
   }
-  handleViewDetails() {
-    console.log(this.handleViewDetails);
-  }
 }
