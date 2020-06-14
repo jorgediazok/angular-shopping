@@ -8,7 +8,7 @@ import { Product } from 'src/app/models/product';
   styleUrls: ['./cart.component.css'],
 })
 export class CartComponent implements OnInit {
-  cartItems = [];
+  cartItems = <any>[];
 
   cartTotal = 0;
 
@@ -45,7 +45,7 @@ export class CartComponent implements OnInit {
   }
 
   //delete items
-  deleteItems(productId, qty) {
+  deleteItems(productId) {
     for (let i in this.cartItems) {
       if (this.cartItems[i].productId === productId) {
         this.cartItems[i].qty--;
