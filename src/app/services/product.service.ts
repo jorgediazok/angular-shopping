@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Product } from '../models/product';
 
-const apiUrl =
-  'https://my-json-server.typicode.com/jorgediazok/angular-shopping/products';
+const apiUrl = 'http://localhost:3000/products';
 @Injectable({
   providedIn: 'root',
 })
