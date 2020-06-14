@@ -17,20 +17,4 @@ export class ProductItemComponent implements OnInit {
   handleAddToCart() {
     this.message.sendMessage(this.productItem);
   }
-
-  scrollTo() {
-    if (this.productItem.id === 1) {
-      window.scrollTo(0, 90);
-    } else if (this.productItem.id === 2) {
-      window.scrollTo(0, 700);
-    } else if (this.productItem.id === 3) {
-      window.scrollTo(0, 900);
-    } else if (this.productItem.id === 4) {
-      window.scrollTo(0, 3000);
-    } else if (this.productItem.id === 5) {
-      window.scrollTo(0, 4000);
-    } else {
-      window.scrollTo(0, 5000);
-    }
-  }
 }

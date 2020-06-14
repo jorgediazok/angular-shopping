@@ -60,14 +60,3 @@ export class CartComponent implements OnInit {
     });
   }
 }
-
-//  deleteItems(productId) {
-// this.cartItems = this.cartItems.filter(
-// (cartItem) => cartItem.productId !== productId
-//);
-//this.cartTotal = 0;
-//this.cartItems.forEach((item) => {
-//this.cartTotal = item.qty * item.price;
-//});
-//}
-//}
