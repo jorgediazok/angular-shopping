@@ -45,13 +45,18 @@ export class CartComponent implements OnInit {
   }
 
   //delete items
-  deleteItems(productId) {
-    this.cartItems = this.cartItems.filter(
-      (cartItem) => cartItem.productId !== productId
-    );
+  deleteItems(productId, qty) {
+    for (let i in this.cartItems) {
+      if (this.cartItems[i].productId === productId) {
+        this.cartItems[i].qty--;
+      }
+      if (this.cartItems[i].qty < 1 || this.cartItems[i].qty === 0) {
+        this.cartItems.splice(i, 1);
+      }
+    }
     this.cartTotal = 0;
     this.cartItems.forEach((item) => {
-      this.cartTotal = item.qty * item.price;
+      this.cartTotal += item.qty * item.price;
     });
   }
 }
