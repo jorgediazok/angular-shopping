@@ -1,5 +1,9 @@
 h1 {
   font-size: 1.7em;
+  text-align: right;
+}
+.card-header {
+  font-weight: bold;
 }
 
 .images-div {
