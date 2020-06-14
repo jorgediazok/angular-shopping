@@ -4,6 +4,7 @@ h1 {
 }
 .card-header {
   font-weight: bold;
+  text-align: left;
 }
 
 .images-div {
