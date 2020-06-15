@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Product } from 'src/app/models/product';
 import { ActivatedRoute } from '@angular/router';
+import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 import { MessangerService } from 'src/app/services/messanger.service';
 
@@ -10,7 +10,7 @@ import { MessangerService } from 'src/app/services/messanger.service';
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
-  products: any[] = [];
+  product: Product | {} = {};
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,13 +23,13 @@ export class DetailsComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.message.getMessage().subscribe((data) => {
+    this.message.getMessage().subscribe((data: Product) => {
       if (data) {
-        this.products.push(data);
+        this.product = data;
       } else {
-        this.products = [];
+        this.product = {};
       }
-      console.log(this.products);
+      console.log(this.product);
     });
   }
 }
