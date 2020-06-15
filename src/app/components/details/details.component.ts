@@ -10,20 +10,26 @@ import { MessangerService } from 'src/app/services/messanger.service';
   styleUrls: ['./details.component.css'],
 })
 export class DetailsComponent implements OnInit {
-  productsFromService: any;
+  products: any[] = [];
+
   constructor(
     private activatedRoute: ActivatedRoute,
     public productService: ProductService,
-    public message: MessangerService
+    private message: MessangerService
   ) {
     this.activatedRoute.params.subscribe((data) => {
       console.log(data);
     });
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.message.getMessage().subscribe((data) => {
-      console.log(data);
+      if (data) {
+        this.products.push(data);
+      } else {
+        this.products = [];
+      }
+      console.log(this.products);
     });
   }
 }

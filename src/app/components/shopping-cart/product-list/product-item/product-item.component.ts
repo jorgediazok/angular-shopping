@@ -22,7 +22,6 @@ export class ProductItemComponent implements OnInit {
 
   sendProduct() {
     this.message.sendMessage(this.productItem);
-    console.log(this.productItem);
   }
 
   route() {
