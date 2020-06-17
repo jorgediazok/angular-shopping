@@ -1,35 +1,22 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
-import { Product } from 'src/app/models/product';
+import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { ProductService } from 'src/app/services/product.service';
-import { MessangerService } from 'src/app/services/messanger.service';
+import { Product } from 'src/app/models/product';
 
 @Component({
   selector: 'app-details',
   templateUrl: './details.component.html',
   styleUrls: ['./details.component.css'],
 })
-export class DetailsComponent implements OnInit {
-  product: Product | {} = {};
+export class DetailsComponent {
+  product: Product[] = [];
 
-  constructor(
-    private activatedRoute: ActivatedRoute,
-    public productService: ProductService,
-    private message: MessangerService
-  ) {
-    this.activatedRoute.params.subscribe((data) => {
-      console.log(data);
-    });
-  }
-
-  ngOnInit() {
-    this.message.getMessage().subscribe((data: Product) => {
-      if (data) {
-        this.product = data;
-      } else {
-        this.product = {};
-      }
+  constructor(private productService: ProductService) {
+    this.productService.getProducts().subscribe((res: Product[]) => {
+      this.product = res;
       console.log(this.product);
     });
   }
+
+  ngOnInit() {}
 }

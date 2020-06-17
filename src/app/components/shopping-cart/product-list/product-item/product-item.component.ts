@@ -20,10 +20,6 @@ export class ProductItemComponent implements OnInit {
     this.message.sendMessage(this.productItem);
   }
 
-  sendProduct() {
-    this.message.sendMessage(this.productItem);
-  }
-
   route() {
     this.router.navigate(['/details', this.id]);
   }
