@@ -14,7 +14,6 @@ export class DetailsComponent {
   constructor(private productService: ProductService) {
     this.productService.getProducts().subscribe((res: Product[]) => {
       this.product = res;
-      console.log(this.product);
     });
   }
 
