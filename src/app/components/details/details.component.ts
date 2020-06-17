@@ -18,9 +18,6 @@ export class DetailsComponent {
   ) {
     this.activatedRoute.params.subscribe((data) => {
       console.log(data.id);
-      if (data.id == 1) {
-        window.scrollTo(0, 1500);
-      }
     });
     this.productService.getProducts().subscribe((res: Product[]) => {
       this.product = res;
