@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
+import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
 
@@ -11,7 +12,16 @@ import { Product } from 'src/app/models/product';
 export class DetailsComponent {
   product: Product[] = [];
 
-  constructor(private productService: ProductService) {
+  constructor(
+    private activatedRoute: ActivatedRoute,
+    private productService: ProductService
+  ) {
+    this.activatedRoute.params.subscribe((data) => {
+      console.log(data.id);
+      if (data.id == 1) {
+        window.scrollTo(0, 1500);
+      }
+    });
     this.productService.getProducts().subscribe((res: Product[]) => {
       this.product = res;
     });
