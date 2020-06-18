@@ -11,7 +11,6 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: ShoppingCartComponent },
-  { path: 'details', component: DetailsComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];

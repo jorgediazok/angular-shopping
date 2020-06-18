@@ -1,5 +1,4 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { Component } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { ProductService } from 'src/app/services/product.service';
 import { Product } from 'src/app/models/product';
@@ -13,16 +12,18 @@ export class DetailsComponent {
   product: Product[] = [];
 
   constructor(
-    private activatedRoute: ActivatedRoute,
+    private route: ActivatedRoute,
     private productService: ProductService
-  ) {
-    this.activatedRoute.params.subscribe((data) => {
-      console.log(data.id);
+  ) {}
+
+  ngOnInit() {
+    this.route.params.subscribe((params) => {
+      const _id = params['id'].toString();
+      console.log(_id);
     });
     this.productService.getProducts().subscribe((res: Product[]) => {
       this.product = res;
+      console.log(res);
     });
   }
-
-  ngOnInit() {}
 }
