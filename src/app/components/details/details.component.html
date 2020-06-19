@@ -1,17 +1,19 @@
 <h1>Products Details</h1>
 <div class="card text-center mt-3" *ngFor="let prod of product; i as index">
-  <div class="card-header">
-    {{ prod.details.header }}
-  </div>
-  <div class="card-body">
-    <h5 class="card-title">{{ prod.details.title }}</h5>
-    <p class="card-text">{{ prod.details.description }}</p>
-    <div class="images-div">
-      <img src="{{ prod.details.image1 }}" alt="product" />
-      <img src="{{ prod.details.image2 }}" alt="product" />
-      <img src="{{ prod.details.image3 }}" alt="product" />
+  <span *ngIf="prod">
+    <div class="card-header">
+      {{ prod.details.header }}
     </div>
-    <button class="btn btn-primary" [routerLink]="['/home']">Buy Now!</button>
-  </div>
-  <div class="card-footer text-muted">{{ prod.details.footer }}</div>
+    <div class="card-body">
+      <h5 class="card-title">{{ prod.details.title }}</h5>
+      <p class="card-text">{{ prod.details.description }}</p>
+      <div class="images-div">
+        <img src="{{ prod.details.image1 }}" alt="product" />
+        <img src="{{ prod.details.image2 }}" alt="product" />
+        <img src="{{ prod.details.image3 }}" alt="product" />
+      </div>
+      <button class="btn btn-primary" [routerLink]="['/home']">Buy Now!</button>
+    </div>
+    <div class="card-footer text-muted">{{ prod.details.footer }}</div>
+  </span>
 </div>
