@@ -1,3 +1,5 @@
+//Acá pongo mi modelo de producto !
+
 export class Product {
   id: number;
   name: string;
