@@ -26,4 +26,34 @@ router.post("/signin", async (req, res) => {
   return res.status(200).json({ token });
 });
 
+router.get("/profile", verifyToken, (req, res) => {
+  res.json([
+    {
+      message: "Welcome back! Continue shopping with us",
+    },
+  ]);
+});
+
+async function verifyToken(req, res, next) {
+  try {
+    if (!req.headers.authorization) {
+      return res.status(401).send("Authorization Denied");
+    }
+    const token = req.headers.authorization.split(" ")[1];
+    if (token === "null") {
+      return res.status(401).send("Authorization Denied");
+    }
+    const payload = await jwt.verify(token, "secretsecretword");
+    console.log(payload);
+    if (!payload) {
+      return res.status(401).send("Authorization denied");
+    }
+    req.userId = payload._id;
+    next();
+  } catch (e) {
+    console.log(e);
+    return res.status(401).send("Unauthorized request");
+  }
+}
+
 module.exports = router;
