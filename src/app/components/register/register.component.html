@@ -5,11 +5,7 @@
         <h1 class="register-title animate__animated animate__pulse">
           SIGN UP
         </h1>
-        <form
-          [formGroup]="registerForm"
-          (ngSubmit)="register()"
-          (submit)="signUp()"
-        >
+        <form [formGroup]="registerForm" (ngSubmit)="register()">
           <div class="form group">
             <label for="email">Email</label>
             <input
@@ -17,7 +13,6 @@
               name="email"
               class="form-control"
               formControlName="email"
-              [(ngModel)]="user.email"
               required
               autofocus
             />
@@ -37,7 +32,6 @@
               type="password"
               class="form-control"
               name="password"
-              [(ngModel)]="user.password"
               required
               formControlName="password"
             />
