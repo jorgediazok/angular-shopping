@@ -29,6 +29,7 @@ router.post("/signin", async (req, res) => {
 router.get("/profile", verifyToken, (req, res) => {
   res.json([
     {
+      _id: 1,
       message: "Welcome back! Continue shopping with us",
     },
   ]);

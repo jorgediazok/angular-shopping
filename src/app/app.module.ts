@@ -18,6 +18,7 @@ import { RegisterComponent } from './components/register/register.component';
 import { DetailsComponent } from './components/details/details.component';
 import { ProductDetailsComponent } from './components/details/product-details/product-details.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
+import { ProfileComponent } from './components/profile/profile.component';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { PageNotFoundComponent } from './components/shared/page-not-found/page-n
     PageNotFoundComponent,
     DetailsComponent,
     ProductDetailsComponent,
+    ProfileComponent,
   ],
   imports: [
     BrowserModule,
