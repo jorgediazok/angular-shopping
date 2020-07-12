@@ -6,16 +6,18 @@
           class="animate__animated animate__pulse"
           style="text-align: center;"
         >
-          LOGIN
+          SIGN IN
         </h1>
-        <form [formGroup]="loginForm" (ngSubmit)="login()">
+        <form [formGroup]="loginForm" (submit)="login()">
           <div class="form group">
             <label for="email">Email</label>
             <input
               type="email"
               class="form-control"
               name="email"
+              [(ngModel)]="user.email"
               formControlName="email"
+              required
               autofocus
             />
           </div>
@@ -33,6 +35,9 @@
             <input
               type="password"
               class="form-control"
+              name="password"
+              [(ngModel)]="user.password"
+              required
               formControlName="password"
             />
           </div>
@@ -47,7 +52,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-block mt-3">
-            Login
+            SIGN IN
           </button>
         </form>
         <div class="form-group mt-3">
