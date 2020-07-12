@@ -7,6 +7,11 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
   styleUrls: ['./register.component.css'],
 })
 export class RegisterComponent implements OnInit {
+  user = {
+    email: '',
+    password: '',
+  };
+
   registerForm: FormGroup;
   constructor(private fb: FormBuilder) {
     this.registerForm = this.fb.group({
@@ -27,5 +32,9 @@ export class RegisterComponent implements OnInit {
   register() {
     console.log(this.registerForm.value);
     this.registerForm.reset();
+  }
+
+  signUp() {
+    console.log(this.user);
   }
 }

@@ -3,9 +3,13 @@
     <div class="card">
       <div class="card-body">
         <h1 class="register-title animate__animated animate__pulse">
-          REGISTER
+          SIGN UP
         </h1>
-        <form [formGroup]="registerForm" (ngSubmit)="register()">
+        <form
+          [formGroup]="registerForm"
+          (ngSubmit)="register()"
+          (submit)="signUp()"
+        >
           <div class="form group">
             <label for="email">Email</label>
             <input
@@ -13,6 +17,8 @@
               name="email"
               class="form-control"
               formControlName="email"
+              [(ngModel)]="user.email"
+              required
               autofocus
             />
           </div>
@@ -30,6 +36,9 @@
             <input
               type="password"
               class="form-control"
+              name="password"
+              [(ngModel)]="user.password"
+              required
               formControlName="password"
             />
           </div>
@@ -55,7 +64,7 @@
           </div>
 
           <button type="submit" class="btn btn-primary btn-block mt-3">
-            Register
+            Sign Up
           </button>
         </form>
         <div class="form-group mt-3">
