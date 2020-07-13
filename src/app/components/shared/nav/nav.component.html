@@ -9,7 +9,15 @@
     <a class="p-2 text-dark" [routerLink]="['/home']">Home</a>
     <a class="p-2 text-dark" href="#">Discounts</a>
     <a class="p-2 text-dark" href="#">Contact</a>
+
+    <ng-container *ngIf="!authservice.logged(); else loggedIn">
+      <a class="btn btn-primary" [routerLink]="['/register']">Sign Up</a>
+      <a class="btn btn-outline-secondary" [routerLink]="['/login']">Login</a>
+    </ng-container>
+    <ng-template #loggedIn>
+      <a class="btn btn-outline-secondary" (click)="authservice.logout()"
+        >Logout</a
+      >
+    </ng-template>
   </nav>
-  <a class="btn btn-primary" [routerLink]="['/register']">Sign Up</a>
-  <a class="btn btn-outline-secondary" [routerLink]="['/login']">Login</a>
 </div>
