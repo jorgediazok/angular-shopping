@@ -10,7 +10,6 @@ export class ProductDetailsComponent implements OnInit {
   constructor(private activatedRoute: ActivatedRoute) {}
   public id: string;
   ngOnInit() {
-    // Note: Below 'queryParams' can be replaced with 'params' depending on your requirements
     this.id = this.activatedRoute.snapshot.paramMap.get('id');
     console.log(this.id);
   }
