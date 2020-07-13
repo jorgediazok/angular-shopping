@@ -4,6 +4,7 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 import { DetailsComponent } from './components/details/details.component';
+import { AuthGuard } from './auth.guard';
 import { ProfileComponent } from './components/profile/profile.component';
 import { PageNotFoundComponent } from './components/shared/page-not-found/page-not-found.component';
 
@@ -12,7 +13,7 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: ShoppingCartComponent },
-  { path: 'profile', component: ProfileComponent },
+  { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
   { path: 'details/:id', component: DetailsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
