@@ -13,5 +13,10 @@
     <strong>Total:</strong>
     {{ cartTotal | currency: "USD" }}
   </li>
-  <button class="btn btn-lg btn-outline-secondary product-btn">Buy Now</button>
+  <button
+    class="btn btn-lg btn-outline-secondary product-btn"
+    [routerLink]="['/page-not-found']"
+  >
+    Buy Now
+  </button>
 </ul>
