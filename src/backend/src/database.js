@@ -1,7 +1,8 @@
 const mongoose = require("mongoose");
+require("dotenv/config");
 
 mongoose
-  .connect("mongodb://localhost/angular-shopping", {
+  .connect(process.env.DB_CONNECTION, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })

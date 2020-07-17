@@ -34,7 +34,7 @@ router.get("/profile", verifyToken, (req, res) => {
     },
   ]);
 });
-//today i continue from here
+
 async function verifyToken(req, res, next) {
   try {
     if (!req.headers.authorization) {
