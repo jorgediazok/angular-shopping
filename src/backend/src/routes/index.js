@@ -17,6 +17,10 @@ router.get("/products", (req, res) => {
 router.post("/signup", async (req, res) => {
   const { email, password } = req.body;
   const newUser = new User({ email, password });
+  const emailAlreadyExists = await User.find({ email });
+  if (emailAlreadyExists) {
+    return res.status(400).json("The email is already taken");
+  }
   //Encriptar password
   newUser.password = await newUser.encryptPassword(password);
   //Grabar usuario
