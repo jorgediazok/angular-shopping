@@ -17,7 +17,7 @@ router.get("/products", (req, res) => {
 router.post("/signup", async (req, res) => {
   const { email, password } = req.body;
   const newUser = new User({ email, password });
-  const emailAlreadyExists = await User.find({ email });
+  const emailAlreadyExists = await User.findOne({ email: email });
   if (emailAlreadyExists) {
     return res.status(400).json("The email is already taken");
   }
