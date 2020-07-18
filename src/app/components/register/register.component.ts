@@ -43,10 +43,12 @@ export class RegisterComponent implements OnInit {
       (res) => {
         localStorage.setItem('token', res.token);
         this.router.navigate(['/profile']);
-        this.toastr.success('Welcome so SportsBA', 'You signed up!');
+        this.toastr.success('Welcome to SportsShopBA', 'You signed up!');
       },
       (err) => {
-        console.log(err);
+        if (err.error === 'The email is already taken') {
+          this.toastr.error('Email already taken');
+        }
       }
     );
     this.registerForm.reset();

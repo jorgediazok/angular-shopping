@@ -39,7 +39,12 @@ export class LoginComponent implements OnInit {
         this.toastr.success('Welcome back', 'You signed up!');
       },
       (err) => {
-        console.log(err);
+        if (err.error === 'Wrong Password') {
+          this.toastr.error('Invalid Credentials');
+        }
+        if (err.error === 'The email does not exist') {
+          this.toastr.error('Email not registered');
+        }
       }
     );
     this.loginForm.reset();

@@ -4,3 +4,13 @@
   justify-content: flex-end;
   margin-bottom: 20px;
 }
+
+.search-input {
+  border: 1px solid #cccccc;
+  transition: all 0.2s ease-out;
+  background-color: white;
+}
+
+.search-input:active {
+  border: 1px solid #cccccc;
+}
