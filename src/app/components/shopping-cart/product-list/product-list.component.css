@@ -9,6 +9,7 @@
   border: 1px solid #cccccc;
   transition: all 0.2s ease-out;
   background-color: white;
+  font-family: "Roboto", sans-serif;
 }
 
 .search-input:active {
