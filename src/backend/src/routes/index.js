@@ -7,7 +7,11 @@ const User = require("../models/User");
 const jwt = require("jsonwebtoken");
 
 router.get("/api", (req, res) => {
-  res.send("Hello World");
+  res.send("This is the backend!");
+});
+
+router.get("/products", (req, res) => {
+  res.send("Products, a lot of them");
 });
 
 router.post("/signup", async (req, res) => {
