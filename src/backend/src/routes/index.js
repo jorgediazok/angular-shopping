@@ -7,12 +7,16 @@ const productsModel = require("../models/Products");
 
 const jwt = require("jsonwebtoken");
 
-//Los metodos get son solo para el Trabajo Practico de Node UTN
-
 router.get("/", async (req, res) => {
   try {
     let products = await productsModel.find({});
-    res.json(products);
+    let productsToReturn = products.map((product) => {
+      return {
+        id: product.id,
+        name: product.name,
+      };
+    });
+    res.status(200).json(productsToReturn);
   } catch {
     (err) => {
       res.status(err.status || 500);
@@ -21,10 +25,23 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/:id", async (req, res) => {
+router.get("/details", async (req, res) => {
   try {
-    let products = await productsModel.findById(req.params.id);
-    res.json(products);
+    let products = await productsModel.find({});
+
+    res.status(200).json(products);
+  } catch {
+    (err) => {
+      res.status(err.status || 500);
+      res.json({ Error: "Can not find any products" });
+    };
+  }
+});
+
+router.get("/details/:id", async (req, res) => {
+  try {
+    let productsDetails = await productsModel.findById(req.params.id);
+    res.json(productsDetails);
   } catch {
     (err) => {
       res.status(err.status || 500);
