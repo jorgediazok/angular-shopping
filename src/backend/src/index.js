@@ -10,7 +10,7 @@ app.use(cors());
 app.use(express.json());
 
 app.use("/", require("./routes/index"));
-app.use("/products", require("./routes/index"));
+app.use("/products", require("./routes/products"));
 
 app.listen(3000);
 console.log("Server on Port", 3000);
