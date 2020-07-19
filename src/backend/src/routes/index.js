@@ -9,7 +9,7 @@ const jwt = require("jsonwebtoken");
 //Los metodos get son solo para el Trabajo Practico de Node UTN
 
 router.get("/", (req, res) => {
-  res.send("ACA VAN LOS PRODUCTOS!");
+  res.send("ESTA ES LA HOME");
 });
 
 router.post("/signup", async (req, res) => {
