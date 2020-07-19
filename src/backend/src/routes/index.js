@@ -6,7 +6,7 @@ const User = require("../models/User");
 
 const jwt = require("jsonwebtoken");
 
-router.get("/api", (req, res) => {
+router.get("/", (req, res) => {
   res.send("This is the backend!");
 });
 
