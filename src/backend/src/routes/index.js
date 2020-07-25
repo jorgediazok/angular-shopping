@@ -25,7 +25,7 @@ router.get("/", async (req, res) => {
   }
 });
 
-router.get("/details", async (req, res) => {
+router.get("/products-details", async (req, res) => {
   try {
     let products = await productsModel.find({});
 
@@ -38,7 +38,7 @@ router.get("/details", async (req, res) => {
   }
 });
 
-router.get("/details/:id", async (req, res) => {
+router.get("/products-details/:id", async (req, res) => {
   try {
     let productsDetails = await productsModel.findById(req.params.id);
     res.json(productsDetails);

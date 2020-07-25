@@ -14,6 +14,7 @@ const routes: Routes = [
   { path: 'register', component: RegisterComponent },
   { path: 'home', component: ShoppingCartComponent },
   { path: 'profile', component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: 'details', component: DetailsComponent },
   { path: 'details/:id', component: DetailsComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
