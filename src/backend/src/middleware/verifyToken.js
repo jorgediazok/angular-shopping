@@ -1,3 +1,5 @@
+const jwt = require("jsonwebtoken");
+
 async function verifyToken(req, res, next) {
   try {
     if (!req.headers.authorization) {
